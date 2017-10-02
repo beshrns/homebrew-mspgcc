@@ -17,12 +17,12 @@ class Msp430Gcc < Formula
   
   patch do
     url "http://sourceforge.net/p/mspgcc/bugs/352/attachment/0001-SF-352-Bad-code-generated-pushing-a20-from-stack.patch"
-    sha1 "c1f17649634995399ad45c30b0c65cf18320b784"
+    sha256 "34eb344c7e2cffa3d7feef04847c7bcc65fc2aeb8bf9185fef50c6b426a3a236"
   end
   
   patch do
     url "http://sourceforge.net/p/mspgcc/bugs/_discuss/thread/fd929b9e/db43/attachment/0001-SF-357-Shift-operations-may-produce-incorrect-result.patch"
-    sha1 "76c464df8e76f98444edb457db45a68a71ddc83e"
+    sha256 "da7d3cd3b47f860fe5171eeecc1a10d24da5f7ebba06b671519bfa237167f336"
   end
   
   def install
