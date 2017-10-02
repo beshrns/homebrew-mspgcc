@@ -1,7 +1,7 @@
 class Msp430Gcc < Formula
   homepage "http://mspgcc.sourceforge.net"
-  url "https://ftpmirror.gnu.org/gcc/gcc-4.7.0/gcc-4.7.0.tar.bz2"
-  sha256 "a680083e016f656dab7acd45b9729912e70e71bbffcbf0e3e8aa1cccf19dc9a5"
+  url "https://ftpmirror.gnu.org/gcc/gcc-4.7.2/gcc-4.7.2.tar.bz2"
+  sha256 "8a9283d7010fb9fe5ece3ca507e0af5c19412626384f8a5e9434251ae100b084"
   env :std
 
   depends_on "msp430-binutils"
@@ -14,7 +14,17 @@ class Msp430Gcc < Formula
     url "https://downloads.sourceforge.net/project/mspgcc/Patches/gcc-4.7.0/msp430-gcc-4.7.0-20120911.patch"
     sha256 "db0b6e502c89be4cfee518e772125eaea66cc289d9428c57ddcc187a3be9e77a"
   end
-
+  
+  patch do
+    url "http://sourceforge.net/p/mspgcc/bugs/352/attachment/0001-SF-352-Bad-code-generated-pushing-a20-from-stack.patch"
+    sha256 "34eb344c7e2cffa3d7feef04847c7bcc65fc2aeb8bf9185fef50c6b426a3a236"
+  end
+  
+  patch do
+    url "http://sourceforge.net/p/mspgcc/bugs/_discuss/thread/fd929b9e/db43/attachment/0001-SF-357-Shift-operations-may-produce-incorrect-result.patch"
+    sha256 "da7d3cd3b47f860fe5171eeecc1a10d24da5f7ebba06b671519bfa237167f336"
+  end
+  
   def install
     # The bootstrap process uses "xgcc", which doesn't have these flags. This
     # results in an error like the following:

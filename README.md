@@ -5,7 +5,7 @@ These are [Homebrew][] formulae for [mspgcc][], the compiler toolchain for the M
 
 To get everything, type:
 
-    $ brew tap sampsyo/mspgcc
+    $ brew tap beshrns/mspgcc
     $ brew install msp430-libc
 
 Since `libc` is the top of the dependency chain, this should suffice to get everything you need.
