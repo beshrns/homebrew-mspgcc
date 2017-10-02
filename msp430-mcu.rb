@@ -1,17 +1,15 @@
-require 'formula'
-
 class Msp430Mcu < Formula
-  homepage 'http://mspgcc.sourceforge.net'
-  url 'http://sourceforge.net/projects/mspgcc/files/msp430mcu/msp430mcu-20120406.tar.bz2'
-  sha1 'c096eec84f0f287c45db713a550ec50c518fa065'
+  homepage "http://mspgcc.sourceforge.net"
+  url "https://downloads.sourceforge.net/project/mspgcc/msp430mcu/msp430mcu-20130321.tar.bz2"
+  sha256 "01be411f8901362fab32e7e1be044a44e087a98f3bd2346ac167960cfe6fa221"
 
   def install
     # Create the "bin" directory for installation. The install.sh script
     # expects this to exist.
-    Dir.mkdir "#{prefix}/bin"
+    Dir.mkdir bin.to_s
 
     # As suggested by the README.
-    ENV['MSP430MCU_ROOT'] = Dir.pwd
+    ENV["MSP430MCU_ROOT"] = Dir.pwd
     system "./scripts/install.sh", prefix
   end
 end
