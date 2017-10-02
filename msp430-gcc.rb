@@ -1,7 +1,7 @@
 class Msp430Gcc < Formula
   homepage "http://mspgcc.sourceforge.net"
-  url "https://ftpmirror.gnu.org/gcc/gcc-4.7.0/gcc-4.7.0.tar.bz2"
-  sha256 "a680083e016f656dab7acd45b9729912e70e71bbffcbf0e3e8aa1cccf19dc9a5"
+  url "https://ftpmirror.gnu.org/gcc/gcc-4.7.2/gcc-4.7.2.tar.bz2"
+  sha256 "115h03hil99ljig8lkrq4qk426awmzh0g99wrrggxf8g07bq74la"
   env :std
 
   depends_on "msp430-binutils"
